@@ -1,5 +1,10 @@
-on: create
-name: Github Release
+name: Release CI
+
+on:
+  push:
+    branches:
+    - main
+    
 jobs:
   build:
     name: Build APK

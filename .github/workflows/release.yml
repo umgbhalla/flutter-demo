@@ -38,6 +38,7 @@ jobs:
       - run: flutter clean
       - run: flutter build ios --release --no-codesign
 
+  
   build_appbundle:
     name: Build Flutter (Android)
     needs: [flutter_test]
@@ -60,5 +61,5 @@ jobs:
             name: release-apk
             path: |
                   build/app/outputs/bundle/release/app-release.aab
-  
+    
              

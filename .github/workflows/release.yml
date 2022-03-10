@@ -53,3 +53,14 @@ jobs:
       - run: flutter pub get
       - run: flutter clean
       - run: flutter build appbundle
+      
+  artifacts:
+     name: Archive artifacts
+     needs: [flutter_test]
+     runs-on: ubuntu-latest
+     steps:
+      - uses: actions/upload-artifact@v2
+        with:
+           name: release-apk
+           path: |
+             build/app/outputs/*

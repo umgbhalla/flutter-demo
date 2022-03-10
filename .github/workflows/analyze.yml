@@ -22,16 +22,16 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     env:
-      JAVA_VERSION: "7.0"
+      JAVA_VERSION: "11.0"
       FLUTTER_VERSION: "2.5.3"
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-java@v1
         with:
-          java-version: $
+          java-version: "11"
       - uses: subosito/flutter-action@v2
         with:
-          flutter-version: $
+          flutter-version: "2.5.3"
       - run: flutter pub get
       - run: flutter analyze
       - run: flutter test

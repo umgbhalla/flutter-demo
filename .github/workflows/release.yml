@@ -63,4 +63,4 @@ jobs:
         with:
            name: release-apk
            path: |
-             build/app/outputs/*
+             build/app/outputs/bundle/release/app-release.aab
